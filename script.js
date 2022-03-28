@@ -32,6 +32,7 @@ window.onscroll = function(){
 }
 
 
+
 // Side Navigation Menu Closed When Navigation Links Clicked
 let navLinks = document.querySelectorAll(".menu li a");
 for (var i = 0; i < navLinks.length; i++){

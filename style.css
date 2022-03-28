@@ -1,11 +1,13 @@
 /* Google font CDN Link */
 @import url('https://font.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Orbitron:wght@400;500;600&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /*Custom Scroll Bar CSS*/
 ::-webkit-scrollbar{
@@ -26,10 +28,12 @@
 nav{
     position: fixed;
     width:100%;
-    padding: 20px 0;
+    min-height:10vh;
+    padding: 10px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.4s ease;
     z-index:998;
+    background: #E3D4B7 ;
 }
 nav.sticky{
     padding: 13px 0;
@@ -45,13 +49,14 @@ nav .navbar{
 nav .navbar .logo a{
     font-size: 40px;
     font-weight:500;
-    color:#E3D4B7 ;
+    color:#0E2431 ;
 }
 nav.sticky .navbar .logo a{
     color:#0E2431;
 }
 nav .navbar .menu{
     display: flex;
+    margin-right: 400px;
 
 }
 nav .navbar .menu li{
@@ -59,6 +64,12 @@ nav .navbar .menu li{
     list-style: none;
 }
 .navbar .menu li a{
+    font-size:18px;
+    font-weight:500;
+    color:#0E2431;
+    transition: all 0.3s ease;
+}
+.navbar .menu .dropdown li a{
     font-size:18px;
     font-weight:500;
     color:#0E2431;
@@ -73,32 +84,53 @@ nav.sticky .navbar .menu li a{
 nav.sticky .navbar .menu li a:hover{
     color:#0E2431;
 }
-.navbar .media-icons a{
-    font-size:18px;
-    margin: 0 6px;
-    color:#E3D4B7 ;
-}
-nav.sticky .navbar .media-icons a{
-    color:#0E2431;
-}
-/* Side nav menu button CSS*/
-nav .menu-btn,
-.navbar .cancel-btn{
-    position: absolute;
-    color:#0E2431;
-    font-size:20px;
-    right:20px;
-    top:20px;
-    display: none;
-    cursor:pointer;
 
-}
-nav .menu-btn{
-    color: #E3D4B7 ;
-}
-nav.sticky .menu-btn{
-    color: #0E2431;
-}
+nav .navbar .menu .dropbtn {
+    height:7vh;
+    color: #000;
+    font-size:12px;
+    padding-top:14px;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  nav .navbar .menu .dropdown {
+    position: relative;
+    float:right;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  nav .navbar .menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #E3D4B7;
+    
+  }
+  
+  /* Links inside the dropdown */
+  nav .navbar .menu .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition:all 0.10s ease;
+  }
+  
+
+  nav .navbar .menu .dropdown-content a:hover {
+      background-color: #ddd;
+     
+    }
+  
+
+    nav .navbar .menu .dropdown:hover .dropdown-content {
+      display: block;
+      
+    }
 
 /*home page CSS*/
 .homebg{
@@ -143,9 +175,9 @@ nav.sticky .menu-btn{
     height:7vh;
     outline:none;
     color:#FFF;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    margin-right:30px;
+    margin-right:20px;
     background: #E3D4B7;
     border: 2px solid transparent;
     border-radius:20px;
@@ -207,9 +239,8 @@ nav.sticky .menu-btn{
     height:7vh;
     outline:none;
     color:#FFF;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    margin-right:30px;
     background: #0E2431;
     border: 2px solid transparent;
     border-radius:20px;
@@ -221,32 +252,687 @@ nav.sticky .menu-btn{
     color:#0E2431;
 }
 /*Store CSS*/
-.store{
+.storebody{
     width:100%;
-    height:80vh;
+    height:130vh;
+    padding:0px 50px 50px 50px;
+    position:relative;
 }
-.store .storeboard1{
-    width:50%;
-    height:80vh;
-    background-color: blue;
+.storebody .storeboard1{
+    width:49%;
+    height:100vh;
     float:left;
-    background: url("shoe1.jpg") no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-attachment: fixed;
+    padding-bottom:70px;
+    background-image: url("nike1.jpg");
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
-.store .storeboard2{
-    width:50%;
-    height:80vh;
-    background-color: red;
+.storebody .storeboard2{
+    width: 49%;
+    height:100vh;
     float:left;
-    background: url("shoe3.jpg") no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-attachment: fixed;
+    margin-left:8px;
+    padding-bottom:70px;
+    background-image: url("nike2.jpg");
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
-.store .storeboard .content-one .description{
-    font-size: 18px;
+.storebody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
     color:#0E2431;
     padding-top:20px;
+    padding-bottom:20px;
+}
+.storebody .storeboard1 .content-one{
+    height:100%;
+    width:90%;
+    font-size: 24px;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+    padding-top: 450px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.storebody .storeboard1 .homebtn{
+    padding-top:25px;
+}
+.storebody .storeboard1 .homebtn button{
+    width:15%;
+    height:6vh;
+    outline:none;
+    color:#FFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:10px;
+    background: #E3D4B7;
+    border: 2px solid transparent;
+    border-radius:20px;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.storebody .storeboard1 .homebtn button:hover{
+    background-color: #fff;
+    color:#0E2431;
+}
+
+
+.storebody .storeboard2 .content-two{
+    height:100%;
+    width:90%;
+    font-size: 24px;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+    padding-top: 450px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.storebody .storeboard2 .homebtn{
+    padding-top:25px;
+}
+.storebody .storeboard2 .homebtn button{
+    width:15%;
+    height:6vh;
+    outline:none;
+    color:#FFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:30px;
+    background: #E3D4B7;
+    border: 2px solid transparent;
+    border-radius:20px;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.storebody .storeboard2 .homebtn button:hover{
+    background-color: #fff;
+    color:#0E2431;
+}
+
+/*SHop CSS Section*/
+.shopbody{
+    width:100%;
+    height:120vh;
+    padding:0px 50px 50px 50px;
+}
+.shopbody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0E2431;
+    margin-left:15px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.shopbody .shopgrid{
+    width:100%;
+    height:90vh;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    float: left;
+    display: flex;
+   
+}
+.shopbody .shopgrid .box{
+    width:32.7%;
+    height:85vh;
+    font-size: 18px;
+    margin-right:12px;
+    cursor: pointer;
+}
+.shopbody .shopgrid .box .description{
+    padding-top:10px;
+}
+.shopbody .shopgrid .box .description2{
+    padding-top:10px;
+    color:#acaeb0;
+}
+.shopbody .shopgrid .box .price{
+    float:right;
+    margin-top:-50px;
+}
+/*Trending CSS*/
+.storebody{
+    width:100%;
+    height:130vh;
+    padding:0px 50px 50px 50px;
+    position:relative;
+}
+.storebody .trendboard1{
+    width:49%;
+    height:100vh;
+    float:left;
+    padding-bottom:70px;
+    background-image: url("nike3.webp");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.storebody .trendboard2{
+    width: 49%;
+    height:100vh;
+    float:left;
+    margin-left:8px;
+    padding-bottom:70px;
+    background-image: url("nike4.webp");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.storebody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0E2431;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.storebody .trendboard1 .content-one{
+    height:100vh;
+    width:90%;
+    font-size: 24px;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+    padding-top: 450px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.storebody .trendboard1 .homebtn{
+    padding-top:25px;
+}
+.storebody .trendboard1 .homebtn button{
+    width:15%;
+    height:6vh;
+    outline:none;
+    color:#FFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:10px;
+    background: #E3D4B7;
+    border: 2px solid transparent;
+    border-radius:20px;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.storebody .trendboard1 .homebtn button:hover{
+    background-color: #fff;
+    color:#0E2431;
+}
+
+
+.storebody .trendboard2 .content-two{
+    height:100vh;
+    width:90%;
+    font-size: 24px;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+    padding-top: 450px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.storebody .trendboard2 .homebtn{
+    padding-top:25px;
+}
+.storebody .trendboard2 .homebtn button{
+    width:15%;
+    height:6vh;
+    outline:none;
+    color:#FFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:30px;
+    background: #E3D4B7;
+    border: 2px solid transparent;
+    border-radius:20px;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.storebody .trendboard2 .homebtn button:hover{
+    background-color: #fff;
+    color:#0E2431;
+}
+/*Banner CSS*/
+.bannerbody{
+    width:100%;
+    height:130vh;
+    padding:0px 50px 50px 50px;
+    position:relative;
+}
+.bannerbody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0E2431;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.bannerbody .bannerimg{
+    height:95vh;
+    width:100%;
+    background: url("banner1.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bannerbody .bannerimg .content{
+    height:100%;
+    width:90%;
+    margin:auto;
+    padding-top: 150px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.bannerbody .bannerimg .content .description{
+    font-size: 80px;
+    font-weight: 900;
+    color:#fff;
+    line-height: 1;
+    word-spacing: 5px;
+    font-family: 'Anton', sans-serif;
+}
+.bannerbody .bannerimg .content .description1{
+    font-size: 18px;
+    color:#FFF;
+    padding-top:20px;
+}
+.bannerbody .bannerimg .content .homebtn{
+    padding-top:25px;
+}
+.bannerbody .bannerimg .content .homebtn button{
+    width:7%;
+    height:6vh;
+    outline:none;
+    color:#0E2431;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:30px;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius:20px;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.bannerbody .bannerimg .content .homebtn button:hover{
+    background-color: #E3D4B7;
+    color:#0E2431;
+}
+/*Sizing Section CSS */
+.sizebody{
+    width:100%;
+    height:130vh;
+    padding:0px 50px 50px 50px;
+    position:relative;
+}
+.sizebody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0E2431;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.sizebody .size-content{
+    width:100%;
+    position:relative;
+}
+.sizebody .size-content .content-one{
+    width:calc(100% / 3 - 0px);
+    height:130vh;
+    position:relative;
+    float:left;
+}
+.sizebody .size-content .description{
+    font-size: 18px;
+    padding-top:20px;
+}
+.memberbody{
+    width:100%;
+    height:130vh;
+    padding:0px 50px 50px 50px;
+    position:relative;
+}
+.memberbody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0E2431;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.memberbody .banner{
+    height:95vh;
+    width:100%;
+    background: url("banner2.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.memberbody .banner .banner-content{
+    height:100%;
+    width:70%;
+    margin:auto;
+    padding:200px 50px 50px 50px;
+    display: flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content: center;
+}
+.memberbody .banner .banner-content .description{
+    text-align: center;
+    font-size: 18px;
+    padding-top:65px;
+}
+.memberbody .banner .banner-content .homebtn{
+    padding-top:25px;
+    padding-left: 80px;
+    width:50%;
+    height:15vh;
+}
+.memberbody .banner .banner-content .homebtn button{
+    width:30%;
+    height:7vh;
+    outline:none;
+    color:#FFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:30px;
+    background: #0E2431;
+    border: 2px solid transparent;
+    border-radius:20px;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.memberbody .banner .banner-content .homebtn button:hover{
+    background-color: #E3D4B7;
+    color:#0E2431;
+} 
+
+.sizeebody{
+    width:100%;
+    height:69vh;
+    padding:0px 50px 50px 50px;
+    position:relative;
+}
+.sizeebody .title{
+    font-size: 25px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0E2431;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.sizeebody .size-content{
+    width:100%;
+    position:relative;
+}
+.sizeebody .size-content .content-one{
+    width:calc(100% / 3 - 0px);
+    height:40vh;
+    position:relative;
+    float:left;
+}
+.sizeebody .size-content .description{
+    font-size: 18px;
+    padding-top:20px;
+}
+/*Nav Links CSS */
+.linkbody{
+    width:100%;
+    height:120vh;
+    padding:20px 50px 50px 250px;
+    position:relative;
+}
+.linkbody .link-content{
+    width:23%;
+    height:115vh;
+    padding:20px 20px 20px 20px;    
+    float:left;
+    margin-right: 12px;
+}
+.linkbody .link-content .text{
+    width:100%;
+    height:50px;
+}
+.linkbody .link-content .box ul{
+    width:100%;
+    height:40px;
+    color:#acaeb0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.linkbody .link-content .box ul:hover{
+    color:#000;
+}
+/*Footer CSS*/
+.footerbody{
+    width:100%;
+    height: 60vh;
+    padding:20px 50px 50px 50px;
+    background-color: #121415;
+}
+.footerbody .footer-content{
+    width:15%;
+    height: 60vh;
+    float:left;
+    padding-top:50px;
+}
+.footerbody .footer-content .text{
+    width:100%;
+    height:50px;
+    font-size: 12px;
+    color:#fff;
+    word-spacing: 12px;
+    word-spacing: 5px;
+    font-family: 'Anton', sans-serif;
+}
+.footerbody .footer-content .box ul{
+    width:100%;
+    height:40px;
+    font-size: 12px;
+    color:#fff;
+    font-family: 'Anton', sans-serif;
+}
+.footerbody .footer-content .box1 ul{
+    width:100%;
+    height:40px;
+    font-size: 12px;
+    color:#fff;
+}
+.footerbody .media-icons{
+    width:50%;
+    height: 60vh;
+    padding-top:50px;   
+    float:left;
+}
+.footerbody .media-icons a{
+    float:right;
+    font-size:35px;
+    margin-right:15px;
+    color:#acaeb0;
+}
+.feet{
+    width:100%;
+    height:8vh;
+    background:#121415;
+}
+.feet .footer-content{
+    width:13%;
+    height:5vh;
+    float:left;
+    padding-left:50px;
+}
+.feet .footer-content a{
+    font-size:12px;
+    color:#fff;
+    float:left;
+    margin-right: 5px;
+}
+.feet .footer-content p{
+    font-size:12px;
+    float:left;
+    color:#fff;
+}
+.feet .footer-content1{
+    width:25%;
+    height:5vh;
+    float:left;
+    padding-left:px;
+}
+.feet .footer-content1 p{
+    font-size:10px;
+    float:left;
+    color:#acaeb0;
+}
+.feet .footer-nav{
+    width:60%;
+    height:5vh;
+    float:left;
+    padding-left:20px;
+    padding-right:20px;
+}
+.feet .footer-nav ul{
+    float:right;
+    margin-right:20px;
+}
+.feet .footer-nav ul a{
+    font-size:10px;
+    float:left;
+    padding-top: 4px;
+    margin-right:5px;
+    color:#acaeb0;
+}
+
+/* Responsiveness */
+@media (max-width:1115px) {
+    nav .navbar .menu{
+        display: fixed;
+        margin-right: 250px;
+    }
+    .sizebody{
+        margin-bottom:400px;
+    }
+    
+    .sizebody .size-content .content-one{
+        width:calc(100% / 2 - 0px);
+        height:90vh;
+        position:relative;
+
+    }
+    .sizeebody .size-content .content-one{
+        width:calc(100% / 2 - 0px);
+        height:40vh;
+        position:relative;
+        margin-bottom: 100px;
+    }
+    .sizeebody{
+        margin-bottom:250px;
+    }
+}
+@media (max-width:924px) {
+    .storebody .storeboard1{
+        width:50%;
+        height:100vh;
+        padding-bottom:70px;
+        margin-bottom:30px;
+        margin-left:200px;
+    }
+    .storebody .storeboard2{
+        width: 50%;
+        height:100vh;
+        padding-bottom:70px;
+        margin-left:200px;
+        margin-right:150px;
+        margin-bottom:30px;
+    }
+    .storebody .title{
+        text-align: center;
+    }
+    .sizebody{
+        margin-bottom: 400px;
+    }
+    .sizebody .size-content .content-one{
+        width:calc(100% / 1 - 0px);
+        height:90vh;
+        position:relative;
+
+    }
+    .memberbody{
+        margin-top:50px;
+        margin-bottom: 450px;
+    }
+    .sizeebody .size-content .content-one{
+        width:calc(100% / 1  - 0px);
+        height:40vh;
+        position:relative;
+        margin-bottom: 100px;
+    }
+    .sizeebody{
+        margin-bottom:300px;
+    }
+    .linkbody{
+        margin-bottom:320px;
+    }
+    .shopbody{
+        width:100%;
+        height:200vh;
+        padding:0px 50px 50px 50px;
+    }
+    .storebody .trendboard1{
+        width:50%;
+        height:100vh;
+        padding-bottom:70px;
+        margin-bottom:30px;
+        margin-left:200px;
+    }
+    .storebody .trendboard2{
+        width: 50%;
+        height:100vh;
+        padding-bottom:70px;
+        margin-left:200px;
+        margin-right:150px;
+        margin-bottom:30px;
+    }
+    .bannerbody{
+        width:100%;
+        height:130vh;
+        margin-bottom: 450px;
+    }
+}
+@media (max-width:900px) {
+    nav .navbar .menu{
+        display: fixed;
+        margin-right: 150px;
+    
+    }
+}
+@media (max-width:700px) {
+    nav .navbar .menu{
+        display: fixed;
+        margin-right: 10px;
+    
+    }
+}
+@media (max-width:600px) {
+    .storebody .storeboard1{
+        padding-bottom:70px;
+        margin-bottom:30px;
+    }
+    .storebody .storeboard2{
+        padding-bottom:70px;
+        margin-right:150px;
+        margin-bottom:30px;
+    }
+    .storebody .title{
+        text-align: center;
+    }
 }
